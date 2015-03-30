@@ -16,7 +16,6 @@
     </js-module>
 
     <platform name="android">
-
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="VideoPlayer">
                 <param name="android-package" value="com.moust.cordova.videoplayer.VideoPlayer"/>
@@ -24,7 +23,14 @@
         </config-file>
 
         <source-file src="src/android/VideoPlayer.java" target-dir="src/com/moust/cordova/videoplayer" />
-
     </platform>
-
+    <platform name="ios">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="VideoPlayer">
+                <param name="ios-package" value="CPVMoviePlayerViewController"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CPVMoviePlayerViewController.h" />
+        <source-file src="src/ios/CPVMoviePlayerViewController.m" />
+    </platform>
 </plugin>
