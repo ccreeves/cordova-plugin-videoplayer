@@ -27,11 +27,11 @@
     <platform name="ios">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="VideoPlayer">
-                <param name="ios-package" value="CPVMoviePlayerViewController"/>
+                <param name="ios-package" value="CPVideoPlayer"/>
             </feature>
         </config-file>
         <framework src="MediaPlayer.framework" />
-        <header-file src="src/ios/CPVMoviePlayerViewController.h" />
-        <source-file src="src/ios/CPVMoviePlayerViewController.m" />
+        <header-file src="src/ios/CPVideoPlayer.h" />
+        <source-file src="src/ios/CPVideoPlayer.m" />
     </platform>
 </plugin>
