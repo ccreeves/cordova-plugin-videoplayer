@@ -12,5 +12,6 @@
 @interface CDVVideoPlayer : CDVPlugin{
 }
 
-- (void)showMessage:(CDVInvokedUrlCommand*)command;
+- (void)play:(CDVInvokedUrlCommand*)command;
+- (void)close:(CDVInvokedUrlCommand*)command;
 @end

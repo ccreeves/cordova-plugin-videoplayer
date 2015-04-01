@@ -10,10 +10,11 @@
 
 @interface CDVVideoPlayer ()
 @property (nonatomic, strong) MPMoviePlayerViewController *playerController;
+@property (nonatomic, assign) BOOL isPlaing;
 @end
 
 @implementation CDVVideoPlayer
-- (void)showMessage:(CDVInvokedUrlCommand*)command{
+- (void)play:(CDVInvokedUrlCommand*)command{
     if(command.arguments.count != 2){
         CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Argument Error, file URL as argument1, and options as argument 2"];
         [self.commandDelegate  sendPluginResult:pluginResult callbackId:command.callbackId];
@@ -33,9 +34,16 @@
     
     //instanciate MPMoviePlayer
     self.playerController = [[MPMoviePlayerViewController alloc] initWithContentURL:contentURL];
-    [self.viewController.navigationController presentViewController:self.playerController animated:YES completion:nil];
+    [self.viewController presentViewController:self.playerController animated:YES completion:nil];
     [self.playerController.moviePlayer play];
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"OK"];
     [self.commandDelegate  sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+- (void)close:(CDVInvokedUrlCommand*)command{
+    if(!self.playerController){
+        return;
+    }
+    [self.playerController.presentingViewController dismissMoviePlayerViewControllerAnimated];
 }
 @end
