@@ -30,6 +30,7 @@
                 <param name="ios-package" value="CPVMoviePlayerViewController"/>
             </feature>
         </config-file>
+        <framework src="MediaPlayer.framework" />
         <header-file src="src/ios/CPVMoviePlayerViewController.h" />
         <source-file src="src/ios/CPVMoviePlayerViewController.m" />
     </platform>

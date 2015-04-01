@@ -6,8 +6,7 @@
 //
 //
 
-@import MediaPlayer;
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface CPVMoviePlayerViewController : MPMoviePlayerViewController
 @end
-/Users/ishitoya/Dropbox/repository/cordova-plugin-videoplayer/plugin.xml
