@@ -13,6 +13,9 @@
 @end
 
 @implementation CPVMoviePlayerViewController
+- (void)showMessage:(CDVInvokedUrlCommand*)command{
+	NSLog(@"%@", command);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -6,7 +6,11 @@
 //
 //
 
+#import <Cordova/CDV.h>
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface CPVMoviePlayerViewController : MPMoviePlayerViewController
+@interface CPVMoviePlayerViewController : CDVPlugin{
+}
+
+- (void)showMessage:(CDVInvokedUrlCommand*)command;
 @end
