@@ -12,7 +12,7 @@
 @property (nonatomic, strong) MPMoviePlayerViewController *playerController;
 @end
 
-@implementation CPVMoviePlayerViewController
+@implementation CPVideoPlayer
 - (void)showMessage:(CDVInvokedUrlCommand*)command{
     if(command.arguments.count != 2){
         CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Argument Error, file URL as argument1, and options as argument 2"];
