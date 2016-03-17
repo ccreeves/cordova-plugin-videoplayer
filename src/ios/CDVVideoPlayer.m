@@ -34,6 +34,7 @@
     
     //instanciate MPMoviePlayer
     self.playerController = [[MPMoviePlayerViewController alloc] initWithContentURL:contentURL];
+    self.playerController.moviePlayer.controlStyle = MPMovieControlStyleNone;
     [self.viewController presentViewController:self.playerController animated:YES completion:nil];
     [self.playerController.moviePlayer play];
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"OK"];
